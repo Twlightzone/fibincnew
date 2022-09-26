@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { invoke } from "@tauri-apps/api/tauri";
 import Image from "next/image";
-import reactLogo from "../assets/react.svg";
-import tauriLogo from "../assets/tauri.svg";
-import nextLogo from "../assets/next.svg";
+
+import Fib from "../assets/Fib.svg"
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -16,46 +15,19 @@ function App() {
 
   return (
     <div className="container">
-      <div className="TitleOfApp">
-        <h1>Friendbase :)</h1>
-      </div>
-
       <div className="row">
-        {/* <span className="logos">
-          <a href="https://nextjs.org" target="_blank">
-            <Image
-              width={144}
-              height={144}
-              src={nextLogo}
-              className="logo next"
-              alt="Next logo"
-            />
-          </a>
-        </span> */}
         <span className="logos">
-          <a href="https://tauri.app" target="_blank">
+          <a href="https://friendbase.tech/" target="_blank">
             <Image
-              width={144}
-              height={144}
-              src={tauriLogo}
+              width={288}
+              height={288}
+              src={Fib}
               className="logo tauri"
               alt="Tauri logo"
             />
           </a>
         </span>
-        {/* <span className="logos">
-          <a href="https://reactjs.org" target="_blank">
-            <Image
-              width={144}
-              height={144}
-              src={reactLogo}
-              className="logo react"
-              alt="React logo"
-            />
-          </a>
-        </span> */}
       </div>
-{/* 
       <div className="row">
         <div>
           <input
@@ -64,12 +36,12 @@ function App() {
             placeholder="Enter a name..."
           />
           <button type="button" onClick={() => greet()}>
-            Greet
+           Login jk
           </button>
         </div>
       </div>
 
-      <p>{greetMsg}</p> */}
+      <p>{greetMsg}</p>
     </div>
   );
 }

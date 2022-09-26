@@ -19,7 +19,3 @@ span.logos > a > span {
     filter: drop-shadow(0 0 2em #ffff);
   }
 }
-
-.TitleOfApp {
-  font-weight: bold;
-}
