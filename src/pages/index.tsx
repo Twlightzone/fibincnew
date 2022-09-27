@@ -1,18 +1,10 @@
 import { useState } from "react";
-import { invoke } from "@tauri-apps/api/tauri";
 import Image from "next/image";
 
 import Fib from "../assets/Fib.svg"
 
 function App() {
-  const [greetMsg, setGreetMsg] = useState("");
-  const [name, setName] = useState("");
-
-  async function greet() {
-    // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-    setGreetMsg(await invoke("greet", { name }));
-  }
-
+  const [name,setName] = useState("");
   return (
     <div className="container">
       <div className="row">
@@ -33,15 +25,15 @@ function App() {
           <input
             id="greet-input"
             onChange={(e) => setName(e.currentTarget.value)}
-            placeholder="Enter a name..."
+            placeholder="Join anonymously :)"
           />
-          <button type="button" onClick={() => greet()}>
-           Login jk
+          <a href="https://friendbase.tech/" target="_blank"> 
+          <button type="button">
+           Press here
           </button>
+          </a>
         </div>
       </div>
-
-      <p>{greetMsg}</p>
     </div>
   );
 }

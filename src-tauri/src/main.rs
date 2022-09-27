@@ -3,6 +3,8 @@
     windows_subsystem = "windows"
 )]
 
+use tauri::generate_context;
+
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
 fn greet(name: &str) -> String {
@@ -12,6 +14,6 @@ fn greet(name: &str) -> String {
 fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![greet])
-        .run(tauri::generate_context!())
+        .run(generate_context!())
         .expect("error while running tauri application");
 }

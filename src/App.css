@@ -6,8 +6,9 @@ span.logos > a > span {
   overflow: inherit !important;
 }
 
-.logo.next:hover {
-  filter: drop-shadow(0 0 2em #36373f);
+.logo.tauri:hover {
+  filter: drop-shadow(0 0 2em #61dafb);
+  transform: rotate(-180deg) !important;
 }
 
 .logo.react:hover {
@@ -19,3 +20,22 @@ span.logos > a > span {
     filter: drop-shadow(0 0 2em #ffff);
   }
 }
+
+/*
+.box {
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #0000ff;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.box:hover {
+  background-color: #ffcccc;
+  width: 200px;
+  height: 200px;
+  transform: rotate(180deg);
+}
+*/
